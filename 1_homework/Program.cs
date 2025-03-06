@@ -257,5 +257,8 @@ internal class Program
         Console.WriteLine("Task 7");
 
         List_Sponsors(conn);
+
+
+        
     }
 }
