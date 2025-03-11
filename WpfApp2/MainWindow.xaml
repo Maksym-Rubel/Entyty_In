@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Button Click="Fill" Width="100" Margin="4" FontFamily="Arial Black" BorderThickness="0,0,0,0" Background="#FFD4A752" Foreground="#FF1A1918">Fill
+            </Button>
+            <Button Click="Update" Width="100" Margin="4" FontFamily="Arial Black" BorderThickness="0,0,0,0" Background="#FFD4A752" Foreground="#FF1A1918">Update</Button>
+            <TextBox Margin="4" Name ="cmd" Width="412"></TextBox>
+            <ComboBox Name ="Cmb" Width="162" SelectionChanged="Cmb_SelectionChanged" BorderBrush="#FFCE9971">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFCE9971" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <ComboBoxItem Name="cmp">Products</ComboBoxItem>
+                <ComboBoxItem>Salles</ComboBoxItem>
+                <ComboBoxItem>Clients</ComboBoxItem>
+                <ComboBoxItem>Employees</ComboBoxItem>
+            </ComboBox>
+        </DockPanel>
+        <DataGrid Grid.Row="1" Name ="datagrid" BorderBrush="#FFB44F1E" Background="#FFE7E6E2"></DataGrid>
+    </Grid>
+
+</Window>
