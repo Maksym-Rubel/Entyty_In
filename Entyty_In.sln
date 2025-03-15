@@ -11,13 +11,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_homework", "1_homework\1_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_params", "02_params\02_params.csproj", "{BBC449C4-4F7E-445F-A0E6-5DF7259DE64A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Dz", "03_Dz\03_Dz.csproj", "{64F86919-6A28-4B1C-871E-D630B1985B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Dz", "03_Dz\03_Dz.csproj", "{64F86919-6A28-4B1C-871E-D630B1985B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{690E9195-F174-4E1F-BF22-BDA727A0D0A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{690E9195-F174-4E1F-BF22-BDA727A0D0A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data_accsec_layer", "data_accsec_layer\data_accsec_layer.csproj", "{2A4B30EB-2DB8-4990-A460-60112406F4EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data_accsec_layer", "data_accsec_layer\data_accsec_layer.csproj", "{2A4B30EB-2DB8-4990-A460-60112406F4EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{AFDC8357-49AD-425D-A362-8CE359A28987}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{AFDC8357-49AD-425D-A362-8CE359A28987}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_EF_CodeFitrs", "06_EF_CodeFitrs\06_EF_CodeFitrs.csproj", "{44FC8921-AB64-49BA-8602-3CD2B1588821}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Homework", "07_Homework\07_Homework.csproj", "{F1E4A166-09BE-427B-BF26-2F7F82DECCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_DZ_Claasss", "08_DZ_Claasss\08_DZ_Claasss.csproj", "{F13C5548-AEE8-42C0-B28A-9AEE958DC18C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +63,18 @@ Global
 		{AFDC8357-49AD-425D-A362-8CE359A28987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFDC8357-49AD-425D-A362-8CE359A28987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFDC8357-49AD-425D-A362-8CE359A28987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FC8921-AB64-49BA-8602-3CD2B1588821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FC8921-AB64-49BA-8602-3CD2B1588821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FC8921-AB64-49BA-8602-3CD2B1588821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FC8921-AB64-49BA-8602-3CD2B1588821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E4A166-09BE-427B-BF26-2F7F82DECCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E4A166-09BE-427B-BF26-2F7F82DECCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E4A166-09BE-427B-BF26-2F7F82DECCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E4A166-09BE-427B-BF26-2F7F82DECCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13C5548-AEE8-42C0-B28A-9AEE958DC18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13C5548-AEE8-42C0-B28A-9AEE958DC18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13C5548-AEE8-42C0-B28A-9AEE958DC18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13C5548-AEE8-42C0-B28A-9AEE958DC18C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
