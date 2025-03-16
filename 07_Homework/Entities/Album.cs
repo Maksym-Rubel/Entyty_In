@@ -13,7 +13,7 @@ namespace _07_Homework.Entities
         public int ArtistId { get; set; }
         public int Year { get; set; }
 
-        public int GenretId { get; set; }
+        public int GenreId { get; set; }
 
         public Artist Artist { get; set; }
         public Genre Genre { get; set; }

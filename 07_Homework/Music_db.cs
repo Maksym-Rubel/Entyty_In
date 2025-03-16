@@ -12,7 +12,8 @@ namespace _07_Homework
     {
         public Music_db() 
         {
-            this.Database.EnsureCreated();
+            //this.Database.EnsureDeleted();
+            //this.Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -33,7 +34,10 @@ namespace _07_Homework
         public DbSet<Country> Countries { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Playlist> Playlists { get; set; }
-        //public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
+
+        public DbSet<Artist> Artist { get; set; }
+        //public DbSet<PlaylistSong> PlaylistSongs { get; set; }
+        //public DbSet<Playlist> PlaylistTracks { get; set; }
 
 
     }
