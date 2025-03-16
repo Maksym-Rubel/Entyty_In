@@ -158,13 +158,18 @@ internal class Program
             switch (a)
             {
                 case 1:
-                    AddSongToPlaylist(context); 
+                    AddSongToPlaylist(context);
+                    Console.WriteLine();
                     break;
                 case 2:
                     PrintPlaylist(context);
+                    Console.WriteLine();
+
                     break;
                 case 3:
                     AddPlaylist(context);
+                    Console.WriteLine();
+
                     break;
                 case 0:
                     return;
