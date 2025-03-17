@@ -29,8 +29,8 @@ namespace _06_EF_CodeFitrs.Entities
         public double Salary { get; set; }
 
         //
-        public int ?DepartmentId {  get; set; }
-        public int ?CountryId { get; set; }
+        public int DepartmentId {  get; set; }
+        public int CountryId { get; set; }
 
         public string FullName { get => Name + " " + Surname; }
         [NotMapped]

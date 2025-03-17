@@ -61,6 +61,32 @@ internal class Program
         }
         
     }
+    public static void PrintAlbum(Music_db context)
+    {
+        Console.Write("Введіть назву альбома --> ");
+        string playlistName = Console.ReadLine()!;
+
+        var playlist = context.Albums.Include(p => p.Songs).FirstOrDefault(s => s.Name == playlistName);
+        if (playlist == null)
+        {
+            Console.WriteLine("Playlist not found!");
+            return;
+        }
+        if (playlist.Songs == null || playlist.Songs.Count == 0)
+        {
+            Console.WriteLine($"Playlist '{playlist.Name}' is empty.");
+            return;
+        }
+
+        Console.WriteLine($"-------{playlist.Name}-------{playlist.Rating}");
+        Console.WriteLine($"Name              Duration");
+        foreach (var song in playlist.Songs)
+        {
+
+            Console.WriteLine($"{song.Name,-20}{song.Duration,-10}{song.Rating,-10}{song.Listening,-15}\n{song.SongText,-100}");
+        }
+
+    }
     public static void AddPlaylist(Music_db context)
     {
         Console.Write("Введіть назву плейлиста --> ");
@@ -69,6 +95,65 @@ internal class Program
         int category = int.Parse(Console.ReadLine()!);
         context.Playlists.Add(new Playlist {Name = playlistName, CategoryId = category });
         context.SaveChanges();
+    }
+    public static void UpdateAlbumRatting(Music_db context)
+    {
+        Console.Write("Введіть назву плейлиста --> ");
+        string playlistName = Console.ReadLine()!;
+        var album = context.Albums.Include(a => a.Songs).FirstOrDefault(a=> a.Name == playlistName);
+        if (album != null)
+        {
+            album.Rating = album.Songs.Average(a=> a.Rating);
+            context.SaveChanges();
+        }
+    }
+    public static void AddSongRatting(Music_db context)
+    {
+        Console.Write("Ведіть назву пісні --> ");
+        string a;
+        a = Console.ReadLine()!;
+        Console.Write("Ведіть новий рейтинг пісні --> ");
+        float b;
+        b = float.Parse(Console.ReadLine()!);
+        var track = context.Songs.FirstOrDefault(b => b.Name == a);
+        if(track != null)
+        {
+            track.Rating = b;
+            context.SaveChanges();
+            UpdateAlbumRatting(context);
+        }
+    }
+    public static void AddSongListening(Music_db context)
+    {
+        Console.Write("Ведіть назву пісні --> ");
+        string a;
+        a = Console.ReadLine()!;
+        Console.Write("Ведіть кількість прослуховувань пісні --> ");
+        int b;
+        b = int.Parse(Console.ReadLine()!);
+        var track = context.Songs.FirstOrDefault(b => b.Name == a);
+        if (track != null)
+        {
+            track.Listening = b;
+            context.SaveChanges();
+
+        }
+    }
+    public static void AddSongText(Music_db context)
+    {
+        Console.Write("Ведіть назву пісні --> ");
+        string a;
+        a = Console.ReadLine()!;
+        Console.Write("Ведіть текст пісні --> ");
+        string b;
+        b = Console.ReadLine()!;
+        var track = context.Songs.FirstOrDefault(b => b.Name == a);
+        if (track != null)
+        {
+            track.SongText = b;
+            context.SaveChanges();
+
+        }
     }
     private static void Main(string[] args)
     {
@@ -89,9 +174,9 @@ internal class Program
 
 
 
-        //context.Workers.FirstOrDefault(n => n.Name == "Emma").Projects.Add(context.Projects.FirstOrDefault(n => n.Name == "Tetris"));
+        ////context.Workers.FirstOrDefault(n => n.Name == "Emma").Projects.Add(context.Projects.FirstOrDefault(n => n.Name == "Tetris"));
 
-        //context.Playlists.FirstOrDefault(n => n.Id == playlist.Id).Songs.Add(context.Songs.FirstOrDefault(s => s.Id == ssong.Id));
+        ////context.Playlists.FirstOrDefault(n => n.Id == playlist.Id).Songs.Add(context.Songs.FirstOrDefault(s => s.Id == ssong.Id));
 
 
 
@@ -151,6 +236,10 @@ internal class Program
 
         Console.OutputEncoding = UTF8Encoding.UTF8;
         Console.InputEncoding = UTF8Encoding.UTF8;
+        //AddSongRatting(context);
+        //AddSongListening(context);
+        AddSongText(context);
+        PrintAlbum(context);
         while (true) 
         {
             Console.WriteLine("Виберіть Дію [1] - Додати пісню,[2] - Показати плейлист, [3] - Створити плейлист");

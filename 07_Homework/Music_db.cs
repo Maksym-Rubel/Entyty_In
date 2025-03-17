@@ -20,7 +20,7 @@ namespace _07_Homework
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-JELVTGO\SQLEXPRESS;
-                                        Initial Catalog = Songers2;
+                                        Initial Catalog = Songers3;
                                         Integrated Security = True;
                                         Connect Timeout = 2;
                                         Encrypt = False;

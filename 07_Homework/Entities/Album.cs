@@ -13,7 +13,10 @@ namespace _07_Homework.Entities
         public int ArtistId { get; set; }
         public int Year { get; set; }
 
+        public float Rating { get; set; } = 0.0f;
         public int GenreId { get; set; }
+        public ICollection<Song> Songs { get; set; }
+
 
         public Artist Artist { get; set; }
         public Genre Genre { get; set; }
